@@ -34,15 +34,14 @@ export class StudentList {
         return "Student id doesnt exists";
     }
     numberOfStudents(){
-        const count = this.students.length
-        return `Count: ${count}`
+        return this.students.length;
 }
     removeStudent(id: string) {
         if (this.checkStudentId(id)) {
             for (let index = 0; index < this.students.length; index++) {
                 const element = this.students[index];
                 if (element.studentId === id) {
-                    this.students.splice(index, index)
+                    this.students.splice(index,1)
                     return element;
             }
         }

@@ -85,9 +85,26 @@ export class StudentList {
 
     updateCourse(id: string, newCourse: string) {
         // find student using id
+        let student = this.students.find(element => element.studentId === id);
+
+        if (student) {
+            student.course = newCourse;
+            return student;
+        }
+
+        return "Student id doesnt exists";
     }
 
     updateGender(id: string, newGender: string) {
         // find student using id
+        let student = this.students.find(element => element.studentId === id);
+
+        if (student) {
+            student.gender = newGender;
+            return student;
+        }
+
+        return "Student id doesnt exists";
+        
     }
 }

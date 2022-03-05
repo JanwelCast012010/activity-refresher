@@ -34,7 +34,7 @@ export class StudentList {
         return "Student id doesnt exists";
     }
     numberOfStudents(){
-        return this.students.length;
+        return this.students.length
 }
     removeStudent(id: string) {
         if (this.checkStudentId(id)) {
